@@ -16,7 +16,6 @@
           axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=40&offset=0')
           .then((response) => {
             // handle success
-            console.log(response.data.data);
             this.store.cardList = response.data.data;
           })
           .catch(function (error) {
@@ -37,7 +36,7 @@
             <h2 class="text-white fs-6 fw-bold mb-0">Found {{store.cardList.length}} cards</h2>
         </div>
         <div class="cards d-flex flex-wrap justify-content-between">
-            <SingleCard v-for="card in store.cardList" :card="card"/>
+            <SingleCard v-for="card in store.cardList"  @:key="card.id"  :card="card"/>
         </div>
     </section>
 </template>
