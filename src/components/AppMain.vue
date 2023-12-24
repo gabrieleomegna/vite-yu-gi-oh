@@ -1,15 +1,18 @@
 <template>
     <main class="py-4">
         <div id="my_container-cardList" class="container p-4">
+            <AppSearch/>
             <CardsList/>
         </div>
     </main>
 </template>
 <script>
 import CardsList from './CardsList.vue';
+import AppSearch from './AppSearch.vue';
 export default {
     components: {
-        CardsList
+        CardsList,
+        AppSearch
     }
 }
 </script>
