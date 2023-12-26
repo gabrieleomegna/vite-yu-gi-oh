@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <select class="form-select mb-3" aria-label="Default select example" @change="selectFilter(archetypeSelected)" v-model="archetypeSelected">
-            <option value="" selected>Select archetype</option>
+            <option :value="null" selected>Select archetype</option>
             <option v-for="(archetype, index) in archetypesList" :key="index" :value="archetype.archetype_name" >{{ archetype.archetype_name }}</option>
         </select>
     </div>
